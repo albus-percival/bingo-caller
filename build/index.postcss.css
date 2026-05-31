@@ -1,0 +1,83 @@
+body {
+	padding: 0.5em;
+	margin: 0;
+	background: #212121;
+	color: #fff;
+	display: grid;
+	gap: 2em;
+}
+main {
+	display: grid;
+	grid-template-columns: max-content auto;
+	place-content: center;
+	gap: 3em;
+}
+
+span.cell {
+	color: gray;
+	font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	font-size: 2rem;
+	box-sizing: border-box;
+	display: grid;
+	place-items: center;
+	aspect-ratio: 1;
+	width: 3ch;
+	border-radius: 0.5ch;
+	box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+
+	&.done {
+		background: #fff;
+		color: #212121;
+	}
+}
+
+#board {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	place-items: center;
+	gap: 0.5em;
+}
+#done {
+	display: grid;
+	place-items: center;
+	grid-template-rows: repeat(3, auto);
+	gap: 0.5em;
+
+	& > span.cell {
+		font-size: 3rem;
+		/* order: 2; */
+
+		/* &:first-of-type {
+			order: 3;
+		} */
+		
+		&:last-of-type {
+			font-size: 5rem;
+			/* order: 1; */
+		}
+	}
+}
+
+aside {
+	display: grid;
+	grid-template-columns: 15ch auto 15ch;
+	gap: 1em;
+}
+
+button {
+	font-size: 1.2rem;
+	aspect-ratio: 1;
+	cursor: pointer;
+}
+
+#audio {
+	display: grid;
+	justify-items: self-start;
+	align-items: center;
+	grid-template-columns: 1fr 2fr;
+	gap: 0.1em 1em;
+}
+
+label {
+	justify-self: end;
+}

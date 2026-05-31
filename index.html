@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bingo Caller</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<main>
+		<div id="board"></div>
+		<div id="done"></div>
+	</main>
+	<aside>
+		<button id="restart">Restart</button>
+		<div id="audio">
+			<label for="voices">Voices:</label>
+			<select id="voices">
+				<option value="error">TTS not found</option>
+			</select>
+			
+			<label for="repeat">Repeat:</label>
+			<input id="repeat" type="number" min="1" max="3" value="1">
+			
+			<label for="rate">Rate:</label>
+			<input id="rate" type="number" min="0.5" max="3" step="0.1" value="1">
+			
+			<label for="pitch">Pitch:</label>
+			<input id="pitch" type="number" min="0" max="2" step="0.1" value="1">
+		</div>
+		<button id="next">Next</button>
+	</aside>
+
+	<script src="index.js"></script>
+</body>
+</html>
